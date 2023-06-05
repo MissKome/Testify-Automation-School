@@ -13,7 +13,7 @@ class TestMain(unittest.TestCase):
      def test_subtraction(self):
         self.assertEqual(main.subtraction(5, 2), 3, "Should be 3")
         self.assertEqual(main.subtraction(7, 2), 5, "Should be 3")
-        self.assertEqual(main.subtraction(8, 4), 4, "Should be 3")
+        self.assertEqual(main.subtraction(9, 7), 2, "Should be 3")
 
 
 if __name__ == "__main__":
