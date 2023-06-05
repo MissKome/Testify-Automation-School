@@ -10,9 +10,9 @@ class TestMain(unittest.TestCase):
         self.assertEqual(main.addition(40,20), 60 ,"Should be 60")
         self.assertEqual(main.addition(-3,2), -1 ,"Should be -1")
 
-   #   def test_subtraction(self):
-   #      self.assertEqual(main.subtraction(5, 2), 3, "Should be 3")
-   #      self.assertEqual(main.subtraction(7, 2), 5, "Should be 3")
+     def test_subtraction(self):
+        self.assertEqual(main.subtraction(5, 2), 3, "Should be 3")
+        self.assertEqual(main.subtraction(7, 2), 5, "Should be 3")
 
 
 if __name__ == "__main__":
