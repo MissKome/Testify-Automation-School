@@ -1,3 +1,4 @@
+//A Javascript program that prints the name of the triangle based on the length of the sides in relation to one another.
 const side1 = 14
 const side2 = 14
 const side3 = 14
