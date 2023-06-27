@@ -1,5 +1,5 @@
 # ci-cd-testify
-Test Reposistory for CI CD course
+Test Repository for CI-CD course
 
 # Table of Contents
 
