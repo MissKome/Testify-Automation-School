@@ -13,19 +13,9 @@ class TestMain(unittest.TestCase):
      def test_subtraction(self):
         self.assertEqual(main.subtraction(5, 2), 3, "Should be 3")
         self.assertEqual(main.subtraction(7, 2), 5, "Should be 3")
-        # self.assertEqual(main.subtraction(9, 7), 2, "Should be 3")
-
+        self.assertEqual(main.subtraction(9, 7), 2, "Should be 3")
+        self.assertEqual(main.subtraction(10, 7), 3, "Should be 3")
 
 if __name__ == "__main__":
     unittest.main()
 
-# import main
-# import unittest
-
-# class IntegerArithmeticTestCase(unittest.TestCase):
-#         def testAdd(self):  # test method names begin with 'test'
-#             self.assertEqual((1 + 2), 3)
-#             self.assertEqual(0 + 1, 1)
-
-# if __name__ == '__main__':
-#         unittest.main()
