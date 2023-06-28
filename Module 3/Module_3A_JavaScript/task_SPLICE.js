@@ -13,5 +13,5 @@ console.log(months); // output [April, May, June, July, August, September, Octob
 
 const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-console.log( month, month.splice (4,2)); // output : retuned array: ['May', 'Jun']
+console.log( month.splice (4,2), month); // output : retuned array: ['May', 'Jun']
 //                                                   modified array: ['Jan', 'Feb', 'Mar', 'Apr', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
