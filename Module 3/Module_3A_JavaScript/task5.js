@@ -1,3 +1,4 @@
+//Using string concatenation to add the variables declared (Numbers and Strings)
 
 const day = 'Wednesday'
 
