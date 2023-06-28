@@ -1,4 +1,5 @@
 //A javascript program that checks if a given number is odd or even. 
+
 const number = 80
 
 if (number % 2 === 0) {
