@@ -1,7 +1,5 @@
-
 import main
 import unittest
-
 class TestMain(unittest.TestCase):
 
      def test_addition(self):
@@ -18,4 +16,4 @@ class TestMain(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
+    
