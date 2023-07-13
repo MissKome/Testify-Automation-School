@@ -7,7 +7,7 @@ let isDivisible = false;
 if (number % 10 === 0) {
 
   isDivisible = true; 
-  
-}
+
+};
 
 console.log(isDivisible);
