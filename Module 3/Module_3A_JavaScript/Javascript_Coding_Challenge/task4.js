@@ -1,12 +1,12 @@
 //Print a table containing multiplication tables.
 
-const number = 6
+for (let num1 = 1; num1 <= 12; num1++) {
 
-for(let i = 1; i <= 12; i++) {
+    for (let num2 = 1; num2 <= 12; num2++) {
+        let multiplication = num1 * num2;
 
-    const result = i * number;
-    
-    console.log(number + ' * ' + i + ' = ' + result);
+        console.log(num1 + " * " + num2 + " = " + multiplication)
 
+    }
+        console.log(' ');
 }
-
