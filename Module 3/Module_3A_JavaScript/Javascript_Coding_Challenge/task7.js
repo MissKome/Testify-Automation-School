@@ -2,6 +2,6 @@
 
 const numbers = [1, 52, 33, 4, 5, 79, 82];
 
-decendingNumber = numbers.sort((a, b) => b - a);
+descendingNumber = numbers.sort((a, b) => b - a);
 
-console.log (decendingNumber);
+console.log (descendingNumber);
