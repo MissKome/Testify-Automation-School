@@ -1,6 +1,6 @@
 //Return a Boolean if a number is divisible by 10.
 
-const number = parseInt(prompt ('number:'));
+const number = 10
 
 let isDivisible = false;
 
