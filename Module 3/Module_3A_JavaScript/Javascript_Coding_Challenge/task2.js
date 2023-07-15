@@ -1,5 +1,18 @@
 //Create a length converter function
 
+function converter(length) {
+    const centimeter = length * 100000;
+    return centimeter;
+  }
+  
+  const kilometerLengths = 45; // Length in kilometers
+  const conversion = converter(kilometerLengths);
+  
+  console.log(conversion);
+  
+
+  
+/*
 function lengthConverter(length, fromUnit, toUnit) {
     
     const lengthConversions = {
@@ -40,3 +53,4 @@ function lengthConverter(length, fromUnit, toUnit) {
   }
 
   console.log(lengthConverter(500, 'meter', 'centimeter')); 
+*/
