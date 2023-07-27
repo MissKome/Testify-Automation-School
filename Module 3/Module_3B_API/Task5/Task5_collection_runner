@@ -1,0 +1,90 @@
+{
+	"id": "f02f46a1-bce1-4d88-9e43-f86e75824504",
+	"name": "Task4",
+	"timestamp": "2023-07-27T23:14:52.771Z",
+	"collection_id": "17346865-0a46e673-6594-4cd2-a08c-5d296bf77d84",
+	"folder_id": 0,
+	"environment_id": "17346865-f057cbfc-2878-4047-bae7-b28a020ef3d7",
+	"totalPass": 2,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-07-27T23:14:50.545Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "7811b118-1593-4aea-ba9c-3e23c6e1e0e2",
+			"name": "List of Books",
+			"url": "https://simple-books-api.glitch.me/books",
+			"time": 893,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"This confirms the book Id with the name 'The Russians' is 1.": true
+			},
+			"testPassFailCounts": {
+				"This confirms the book Id with the name 'The Russians' is 1.": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				893
+			],
+			"allTests": [
+				{
+					"This confirms the book Id with the name 'The Russians' is 1.": true
+				}
+			]
+		},
+		{
+			"id": "bc6b4c9b-640a-4311-9023-4522e2c5cfd2",
+			"name": "Place an order",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 593,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response body contains 'created' property": false
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body contains 'created' property": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				593
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response body contains 'created' property": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1486,
+	"collection": {
+		"requests": [
+			{
+				"id": "7811b118-1593-4aea-ba9c-3e23c6e1e0e2",
+				"method": "GET"
+			},
+			{
+				"id": "bc6b4c9b-640a-4311-9023-4522e2c5cfd2",
+				"method": "POST"
+			}
+		]
+	}
+}
