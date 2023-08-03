@@ -1,0 +1,374 @@
+{
+	"info": {
+		"_postman_id": "350d0153-f9e3-494f-aba1-130812986613",
+		"name": "TAS_Module3B",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17346865",
+		"_collection_link": "https://www.postman.com/misskome/workspace/testify-automation-school-module-3b/collection/17346865-350d0153-f9e3-494f-aba1-130812986613?action=share&creator=17346865&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Task2",
+			"item": [
+				{
+					"name": "List user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response is 200 status code\", function () {\r",
+									"pm.globals.get(\"variable_key\");\r",
+									"    pm.response.to.have.status(200)\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response status is OK\", function(){\r",
+									"    pm.response.to.have.status(\"OK\")\r",
+									"});\r",
+									"\r",
+									"postman.setNextRequest(\"Create user\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{reqresUrl}}/users?page=3",
+							"host": [
+								"{{reqresUrl}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response have 201 status code\", function(){\r",
+									"    pm.response.to.have.status(201)\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response status is created\", function(){\r",
+									"    pm.response.to.have.status(\"Created\")\r",
+									"});\r",
+									"\r",
+									"postman.setNextRequest(\"Delete\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{bearer token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookId\": 1,\r\n  \"customerName\": \"John\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{reqresUrl}}/users?page=3",
+							"host": [
+								"{{reqresUrl}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response is 204 status code\", function (){\r",
+									"    pm.response.to.have.status(204)\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Response status is No Content\", function(){\r",
+									"    pm.response.to.have.status(\"No Content\")\r",
+									"});\r",
+									"\r",
+									"postman.setNextRequest(\"Place an order\")\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{reqresUrl}}/users/2",
+							"host": [
+								"{{reqresUrl}}"
+							],
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task3",
+			"item": [
+				{
+					"name": "List of books",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify the id number of a non-fiction books with the name 'Untamed'\", function(){\r",
+									"    var books = pm.response.json();\r",
+									"    var booksFound = false;\r",
+									"\r",
+									"    for (let i=0; i < books.length; i++) {\r",
+									"        var book = books[i]\r",
+									"\r",
+									"        if (book.name === \"Untamed\" && book.type === \"non-fiction\") {\r",
+									"            pm.expect(book.id).to.be.a(\"number\")\r",
+									"            booksFound = true \r",
+									"            console.log (book.id)\r",
+									"        }\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{booksuUrl}}/books",
+							"host": [
+								"{{booksuUrl}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task4",
+			"item": [
+				{
+					"name": "List of Books",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"//console.log(jsonData)\r",
+									"console.log(jsonData[0])\r",
+									"pm.environment.set(\"bookid\", jsonData[0].id);\r",
+									"\r",
+									"\r",
+									"//Test to confirm the book id with the name \"The Russians\"\r",
+									"pm.test(\"This confirms the book Id with the name 'The Russians' is \" + jsonData[0].id + \".\", function () {\r",
+									"    pm.expect(1).to.eql(jsonData[0].id);\r",
+									"})\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{booksuUrl}}/books",
+							"host": [
+								"{{booksuUrl}}"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Place an order",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Response body contains 'created' property\", function () {\r",
+									"    pm.expect(jsonData).to.have.property('created');\r",
+									"});\r",
+									"\r",
+									"//postman.setNextRequest(null)\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{maryToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"bookId\": {{bookid}},\r\n  \"customerName\":\"Mary\"\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{booksuUrl}}/orders",
+							"host": [
+								"{{booksuUrl}}"
+							],
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{maryToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "booksuUrl",
+			"value": "https://simple-books-api.glitch.me",
+			"type": "string"
+		},
+		{
+			"key": "reqresUrl",
+			"value": "https://reqres.in/api",
+			"type": "string"
+		},
+		{
+			"key": "userid",
+			"value": "123",
+			"type": "string"
+		},
+		{
+			"key": "username",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "maryToken",
+			"value": "8ff9d86844d5323757cab4f96947343179dc1da8ff2464e07032b316cdb1786f",
+			"type": "string"
+		},
+		{
+			"key": "bookid",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
