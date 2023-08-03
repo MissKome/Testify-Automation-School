@@ -1,0 +1,170 @@
+{
+	"id": "3005051e-72f3-4da6-a6b9-ef9ef19d5b7f",
+	"name": "TAS_Module3B",
+	"timestamp": "2023-08-03T20:30:33.467Z",
+	"collection_id": "17346865-350d0153-f9e3-494f-aba1-130812986613",
+	"folder_id": 0,
+	"environment_id": "17346865-f057cbfc-2878-4047-bae7-b28a020ef3d7",
+	"totalPass": 8,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-08-03T20:30:23.271Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "24dc3b95-b55a-457f-8428-a6e5ac12d08b",
+			"name": "List user",
+			"url": "https://reqres.in/api/users?page=3",
+			"time": 3512,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response is 200 status code": true,
+				"Response status is OK": true
+			},
+			"testPassFailCounts": {
+				"Response is 200 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status is OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3512
+			],
+			"allTests": [
+				{
+					"Response is 200 status code": true,
+					"Response status is OK": true
+				}
+			]
+		},
+		{
+			"id": "416adb14-c692-4380-bbe6-2e2137159f4a",
+			"name": "Create user",
+			"url": "https://reqres.in/api/users?page=3",
+			"time": 1668,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response have 201 status code": true,
+				"Response status is created": true
+			},
+			"testPassFailCounts": {
+				"Response have 201 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status is created": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1668
+			],
+			"allTests": [
+				{
+					"Response have 201 status code": true,
+					"Response status is created": true
+				}
+			]
+		},
+		{
+			"id": "1b7cd0e2-31a7-444f-981a-eb7a2fb09421",
+			"name": "Delete",
+			"url": "https://reqres.in/api/users/2",
+			"time": 554,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Response is 204 status code": true,
+				"Response status is No Content": true
+			},
+			"testPassFailCounts": {
+				"Response is 204 status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status is No Content": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				554
+			],
+			"allTests": [
+				{
+					"Response is 204 status code": true,
+					"Response status is No Content": true
+				}
+			]
+		},
+		{
+			"id": "bd3d6bbb-3853-4658-930d-e9f9bc9bbaaa",
+			"name": "Place an order",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 2477,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Response body contains 'created' property": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body contains 'created' property": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2477
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Response body contains 'created' property": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 8211,
+	"collection": {
+		"requests": [
+			{
+				"id": "24dc3b95-b55a-457f-8428-a6e5ac12d08b",
+				"method": "GET"
+			},
+			{
+				"id": "416adb14-c692-4380-bbe6-2e2137159f4a",
+				"method": "POST"
+			},
+			{
+				"id": "1b7cd0e2-31a7-444f-981a-eb7a2fb09421",
+				"method": "DELETE"
+			},
+			{
+				"id": "bd3d6bbb-3853-4658-930d-e9f9bc9bbaaa",
+				"method": "POST"
+			}
+		]
+	}
+}
