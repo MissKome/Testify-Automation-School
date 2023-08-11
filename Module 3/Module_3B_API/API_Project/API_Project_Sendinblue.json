@@ -24985,7 +24985,7 @@
 												],
 												"body": {
 													"mode": "raw",
-													"raw": "{\n  \"companyName\": \"Your Company\",\n  \"email\": \"josh.cruise@example.com\",\n  \"firstName\": \"Josh\",\n  \"lastName\": \"Cruise\",\n  \"password\": \"Pa55w0rd65\",\n  \"language\": \"en\"\n}",
+													"raw": "{\n  \"companyName\": \"Your Company\",\n  \"email\": \"josh.cruise@example.com\",\n  \"firstName\": \"Josh\",\n  \"lastName\": \"Cruise\",\n  \"password\": \"\",\n  \"language\": \"en\"\n}",
 													"options": {
 														"raw": {
 															"language": "json"
