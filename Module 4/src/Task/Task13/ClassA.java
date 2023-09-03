@@ -6,6 +6,7 @@ public class ClassA {
     int types;
     boolean source;
 
+    //three different constructors of class A
     public ClassA(String foodType) {
         food = foodType;
     }
