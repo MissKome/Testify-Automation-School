@@ -1,6 +1,6 @@
 package Task;
 
-public class Task16 {
+public class Task16A {
 
     //method
     public void foodTypes (){
