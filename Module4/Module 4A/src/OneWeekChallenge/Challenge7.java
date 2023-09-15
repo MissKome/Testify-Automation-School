@@ -3,6 +3,7 @@ package OneWeekChallenge;
 public class Challenge7 {
 
     public static void main(String[] args) {
+
         // Input string to reverse
         String input = "TestifyAutomation";
         Challenge7 object = new Challenge7();  // Create an instance of the Challenge7 class
