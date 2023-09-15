@@ -1,5 +1,5 @@
 package Task;
-
+//Create a method that verify that visitors on the slack channel are coming fot testify Trainings. If they write" Testify" then print out a  welcome messsage if not , theuser should be shown rejection message. after creating this method,then invoke the created method in your main method
 import java.util.Scanner;
 
 public class Task10 {
