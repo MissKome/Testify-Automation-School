@@ -1,5 +1,5 @@
 package Task;
-
+//Build a Simple interest calculator. Write a program to ask the user for the necessary field you need in calculating the simple interest and then communicate the simple interest back to the user is a good sentence
 import java.util.Scanner;
 
 public class Task8 { //a simple interest calculator
