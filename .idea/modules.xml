@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Module4/Module 4A/Module 4A.iml" filepath="$PROJECT_DIR$/Module4/Module 4A/Module 4A.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module4/Module4B/Module4B.iml" filepath="$PROJECT_DIR$/Module4/Module4B/Module4B.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module4/Module4B/Task1/Task1.iml" filepath="$PROJECT_DIR$/Module4/Module4B/Task1/Task1.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Testify-Automation-School.iml" filepath="$PROJECT_DIR$/.idea/Testify-Automation-School.iml" />
     </modules>
   </component>
