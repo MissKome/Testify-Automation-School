@@ -9,13 +9,13 @@
         <module name="Task4" />
         <module name="Task6" />
         <module name="Task5" />
-        <module name="Task8" />
         <module name="Module_4B" />
         <module name="Task7" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Task2" target="17" />
+      <module name="Task8" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
