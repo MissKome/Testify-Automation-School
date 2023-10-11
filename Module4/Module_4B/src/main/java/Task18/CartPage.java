@@ -14,6 +14,7 @@ public class CartPage {
         PageFactory.initElements(Cdriver, this);
     }
 
+    //confirm the product name
     @FindBy(xpath = "//div[@class='inventory_item_name']")
     private WebElement productName;
     public WebElement getProductName (){
@@ -21,6 +22,7 @@ public class CartPage {
 
     }
 
+    //click on the checkout button
     @FindBy(xpath = "//button[@id='checkout']")
     private WebElement checkout;
     public WebElement clickCheckout (){

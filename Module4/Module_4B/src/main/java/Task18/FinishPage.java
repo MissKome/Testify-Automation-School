@@ -13,6 +13,7 @@ public class FinishPage {
         PageFactory.initElements(Pdriver, this);
     }
 
+    //click on the finish button
     @FindBy(xpath = "//button[@id='finish']")
     private WebElement Finish;
     public WebElement getFinish(){
@@ -20,6 +21,7 @@ public class FinishPage {
 
     }
 
+    //get the success message text
     @FindBy(xpath = "//h2[@class='complete-header']")
     private WebElement success;
     public WebElement getSuccess(){

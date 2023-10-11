@@ -13,12 +13,15 @@ public class CheckoutPage {
         PageFactory.initElements(Fdriver, this);
     }
 
+    //input lastname
     @FindBy(xpath = "//input[@id='last-name']")
     private WebElement lastName;
     public WebElement getLastName(){
         return  lastName;
 
     }
+
+    //input firstname
     @FindBy(xpath = "//input[@id='first-name']")
     private WebElement firstName;
     public WebElement getFirstName(){
@@ -26,6 +29,7 @@ public class CheckoutPage {
 
     }
 
+    //input postal code
     @FindBy(xpath = "//input[@id='postal-code']")
     private WebElement postalCode;
     public WebElement getPostalCode(){
@@ -33,6 +37,7 @@ public class CheckoutPage {
 
     }
 
+    //click on continue
     @FindBy(xpath = "//input[@id='continue']")
     private WebElement clickContinue;
     public WebElement getClickContinue(){
@@ -40,6 +45,7 @@ public class CheckoutPage {
 
     }
 
+    //get the product name on the checkout overview page
     @FindBy(xpath = "//div[@class='inventory_item_name']")
     private WebElement checkoutName;
     public WebElement getCheckoutName(){
