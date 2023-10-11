@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="">
+<suite name="Test-Suite">
+    <test name="DemoQA Test">
+        <classes>
+            <class name="Task17.Elements"></class>
+            <class name="Task17.Forms"></class>
+            <class name="Task17.Widgets"></class>
+            <class name="Task17.Interactions"></class>
+        </classes>
+
+    </test>
 
 </suite>
