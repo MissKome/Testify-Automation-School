@@ -1,14 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<!--<suite name="Test-Suite">-->
+<!--    <test name="DemoQA Test">-->
+<!--        <classes>-->
+<!--            <class name="Task17.Elements"></class>-->
+<!--            <class name="Task17.Forms"></class>-->
+<!--            <class name="Task17.Widgets"></class>-->
+<!--            <class name="Task17.Interactions"></class>-->
+<!--        </classes>-->
+
+<!--    </test>-->
+
+<!--</suite>-->
+
 <suite name="Test-Suite">
-    <test name="DemoQA Test">
+    <test name="Task 19 Test">
+        <groups>
+            <run>
+                <include name="one"/>
+            </run>
+        </groups>
         <classes>
-            <class name="Task17.Elements"></class>
-            <class name="Task17.Forms"></class>
-            <class name="Task17.Widgets"></class>
-            <class name="Task17.Interactions"></class>
+            <class name="Task19.DemoQA.ElementsQA"/>
+            <class name="Task19.SauceDemo.SauceTestSauce"/>
         </classes>
-
     </test>
-
 </suite>
