@@ -19,7 +19,5 @@
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/Module4/out" />
-  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (Testify-Automation-School)" project-jdk-type="Python SDK" />
 </project>
